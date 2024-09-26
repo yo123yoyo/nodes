@@ -9,8 +9,8 @@ bash <(curl -s https://raw.githubusercontent.com/DOUBLE-TOP/guides/main/allora/i
 
 source .profile && allorad keys add testkey --recover
 
-INSTALL_ALLORA_WORKER
-bash <(curl -s https://raw.githubusercontent.com/Creator-CB/FILES/refs/heads/main/INSTALL_ALLORA_WORKER.sh)
+************************INSTALL_ALLORA_WORKER
+bash <(curl -s https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/allora-worker3.sh)
 
 CHANGE RPC
 bash <(curl -s https://raw.githubusercontent.com/Creator-CB/FILES/refs/heads/main/Allora-worker-rpcchange.sh)
