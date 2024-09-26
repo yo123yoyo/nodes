@@ -1,0 +1,12 @@
+mkdir -p /home/config/docker/docker-compose/go && cd /home/config/docker/docker-compose/go
+
+cp -r /etc/* /home/config/docker/docker-compose/go/
+
+cp -r /etc/ssl/certs/* /home/config/docker/docker-compose/go/
+
+
+for file in /home/config/docker/docker-compose/go/*; do
+  for i in {1..5}; do
+    cp "$file" "${file}_copy_$i"
+  done
+done
