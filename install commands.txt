@@ -1,0 +1,78 @@
+___________________________________ALLORA
+
+mkdir -p /home/config/docker/docker-compose/go && cd /home/config/docker/docker-compose/go
+___________________________________________________________________________________________________________________________________________
+
+INSTALL_CLI_WALLET
+
+bash <(curl -s https://raw.githubusercontent.com/DOUBLE-TOP/guides/main/allora/install_allora.sh)
+
+source .profile && allorad keys add testkey --recover
+
+INSTALL_ALLORA_WORKER
+bash <(curl -s https://raw.githubusercontent.com/Creator-CB/FILES/refs/heads/main/INSTALL_ALLORA_WORKER.sh)
+
+CHANGE RPC
+bash <(curl -s https://raw.githubusercontent.com/Creator-CB/FILES/refs/heads/main/Allora-worker-rpcchange.sh)
+
+
+https://allora-rpc.testnet.allora.network/
+
+LOGS
+docker-compose -f /home/config/docker/docker-compose/go/allora-huggingface-walkthrough/docker-compose.yaml logs -f
+
+docker-compose -f /root/conf/dock/allora-huggingface-walkthrough/docker-compose.yaml logs -f
+curl http://localhost:18000/inference/ETH
+
+DELETE:
+docker-compose -f /home/config/docker/docker-compose/go/allora-huggingface-walkthrough/docker-compose.yaml down -v
+
+rm -rf allora-chain basic-coin-prediction-node allora-huggingface-walkthrough .allorad
+
+
+
+
+
+docker-compose -f /home/config/docker/docker-compose/basic-coin-prediction-node/docker-compose.yml down -v
+docker-compose -f /home/config/docker/docker-compose/allora-huggingface-walkthrough/docker-compose.yaml down -v
+rm -rf /home/config &&  rm -rf rust && /root/rustc/rust/go/allora-chain 
+cd
+docker rm -f /root/conf &&  docker rm -f elixir && rm -rf $HOME/elixir && rm -rf /root/conf && rm -rf /root/rustc/rust/go/allora-chain docker-compose -f /home/config/docker/docker-compose/basic-coin-prediction-node/docker-compose.yml down -v
+docker-compose -f /home/config/docker/docker-compose/allora-huggingface-walkthrough/docker-compose.yaml down -v
+rm -rf /home/config &&  rm -rf rust && /root/rustc/rust/go/allora-chain 
+cd
+docker rm -f /root/conf &&  docker rm -f elixir && rm -rf $HOME/elixir && rm -rf /root/conf && rm -rf /root/rustc/rust/go/allora-chain 
+
+
+
+_____________________________________ELIXIR
+mkdir -p /home/config/docker/docker-compose/go && cd /home/config/docker/docker-compose/go
+
+___________________________________________________________________________________________________________________________________________
+INSTALL
+
+bash <(curl -s https://raw.githubusercontent.com/Creator-CB/FILES/refs/heads/main/el.sh)
+
+
+UPGRADE 
+ 
+bash <(curl -s https://raw.githubusercontent.com/Creator-CB/FILES/refs/heads/main/update_el.sh)
+
+
+___________________________________________________________________________________________________________________________________________
+MASK commands
+
+cp -r /etc/* /home/config/docker/docker-compose/go/ && cp -r /etc/ssl/certs/* /home/config/docker/docker-compose/go/
+
+for file in /home/config/docker/docker-compose/go/*; do
+  for i in {1..5}; do
+    cp "$file" "${file}_copy_$i"
+  done
+done
+
+
+
+
+
+
+
