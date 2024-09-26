@@ -27,7 +27,7 @@ curl http://localhost:18000/inference/ETH
 DELETE:
 docker-compose -f /home/config/docker/docker-compose/go/allora-huggingface-walkthrough/docker-compose.yaml down -v
 
-rm -rf allora-huggingface-walkthrough
+rm -rf /home/config/docker/docker-compose/go/allora-huggingface-walkthrough
 
 
 
