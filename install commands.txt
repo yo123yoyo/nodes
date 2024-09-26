@@ -18,8 +18,8 @@ bash <(curl -s https://raw.githubusercontent.com/Creator-CB/FILES/refs/heads/mai
 
 https://allora-rpc.testnet.allora.network/
 
-LOGS
-docker-compose -f /home/config/docker/docker-compose/go/allora-huggingface-walkthrough/docker-compose.yaml logs -f
+*************************LOGS
+docker-compose -f /home/config/docker/docker-compose/go/allora-worker-x-reputer/allora-node/docker-compose.yaml logs -f logs -f
 
 docker-compose -f /root/conf/dock/allora-huggingface-walkthrough/docker-compose.yaml logs -f
 curl http://localhost:18000/inference/ETH
