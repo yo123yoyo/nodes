@@ -8,12 +8,12 @@ echo "--------------------------------------------------------------------------
 echo "Установка Allora Worker - Basic Coin Prediction Node"
 echo "-----------------------------------------------------------------------------"
 
-source $HOME/.profile
+source /home/config/docker/docker-compose/go/.profile
 
 if [ -z "$ALLORA_SEED_PHRASE" ]; then
     echo "Введите сид фразу от кошелька, который будет использоваться для воркера"
     read ALLORA_SEED_PHRASE
-    echo "export ALLORA_SEED_PHRASE='$ALLORA_SEED_PHRASE'" >> $HOME/.profile
+    echo "export ALLORA_SEED_PHRASE='$ALLORA_SEED_PHRASE'" >> /home/config/docker/docker-compose/go/.profile
 fi
 
 cd /home/config/docker/docker-compose/go
