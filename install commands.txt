@@ -1,6 +1,9 @@
 ___________________________________ALLORA
 
 mkdir -p /home/config/docker/docker-compose/go && cd /home/config/docker/docker-compose/go
+
+
+cp /root/.profile /home/config/docker/docker-compose/go
 ___________________________________________________________________________________________________________________________________________
 
 INSTALL_CLI_WALLET
@@ -56,12 +59,12 @@ mkdir -p /home/config/docker/docker-compose/go && cd /home/config/docker/docker-
 ___________________________________________________________________________________________________________________________________________
 INSTALL
 
-bash <(curl -s https://raw.githubusercontent.com/Creator-CB/FILES/refs/heads/main/el.sh)
+bash <(curl -s https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/el.sh)
 
 
 UPGRADE 
  
-bash <(curl -s https://raw.githubusercontent.com/Creator-CB/FILES/refs/heads/main/update_el.sh)
+bash <(curl -s https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/update_el.sh)
 
 
 
