@@ -69,6 +69,15 @@ bash <(curl -s https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main
 
 
 
+___________________________________________________________________________________________________________________________________________
+HEMI
+
+Install:
+bash <(curl -s https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/hemi-install.sh)
+
+
+
+
 
 
 
