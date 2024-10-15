@@ -1,0 +1,26 @@
+sudo apt-get install git -y && sudo apt install unzip && sudo apt install nano
+sudo apt install software-properties-common -y
+sudo add-apt-repository ppa:deadsnakes/ppa
+
+sudo apt update -y && sudo apt install python3.11 -y && python3.11 --version
+
+sudo apt install python3-pip python3-venv curl -y
+curl -sSL https://install.python-poetry.org | python3 -
+export PATH="$HOME/.local/bin:$PATH"
+  source ~/.bashrc
+  curl -fsSL https://fnm.vercel.app/install | bash
+  source ~/.bashrc
+  fnm use --install-if-missing 22
+    node -v && npm -v
+
+    apt-get install nodejs -y && npm install -g yarn
+    cd /home/config/docker/docker-compose/go && git clone https://github.com/vana-com/vana-dlp-chatgpt.git && cd vana-dlp-chatgpt
+      cp .env.example .env
+      poetry install
+      pip install vana
+      vanacli wallet create --wallet.name default --wallet.hotkey default
+      vanacli wallet export_private_key
+
+      ./keygen.sh
+
+      sudo systemctl stop vana.service
