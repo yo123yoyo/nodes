@@ -24,3 +24,16 @@ export PATH="$HOME/.local/bin:$PATH"
       ./keygen.sh
 
       sudo systemctl stop vana.service
+
+
+cd /home/config/docker/docker-compose/go/vana-dlp-chatgpt
+
+cat /home/config/docker/docker-compose/go/vana-dlp-chatgpt/public_key_base64.asc
+
+cd .. && git clone https://github.com/Josephtran102/vana-dlp-smart-contracts && cd vana-dlp-smart-contracts
+
+cat /home/config/docker/docker-compose/go/vana-dlp-chatgpt/public_key_base64.asc
+
+
+
+https://service.josephtran.xyz/testnet/vana/pos-validator
