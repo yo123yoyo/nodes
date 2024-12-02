@@ -53,6 +53,14 @@ docker rm -f /root/conf &&  docker rm -f elixir && rm -rf $HOME/elixir && rm -rf
 
 
 
+
+____________
+UPDATE ALLORA
+
+bash <(curl -s https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/update_worker3.sh)
+
+
+
 _____________________________________ELIXIR
 mkdir -p /home/config/docker/docker-compose/go && cd /home/config/docker/docker-compose/go
 
