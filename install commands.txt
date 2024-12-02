@@ -59,6 +59,11 @@ UPDATE ALLORA
 
 bash <(curl -s https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/update_worker3.sh)
 
+docker-compose -f /home/config/docker/docker-compose/go/allora-worker-x-reputer/allora-node/docker-compose.yaml logs -f
+
+docker-compose -f /home/config/docker/docker-compose/go/allora-worker-x-reputer/allora-node/docker-compose.yaml restart
+
+
 
 
 _____________________________________ELIXIR
