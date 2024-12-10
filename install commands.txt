@@ -63,11 +63,22 @@ docker-compose -f /home/config/docker/docker-compose/go/allora-worker-x-reputer/
 
 docker-compose -f /home/config/docker/docker-compose/go/allora-worker-x-reputer/allora-node/docker-compose.yaml restart
 
+
+
+bash <(curl -s https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/allora-worker2.sh)
+
+
+
+
+STOP ALLORA WORKER3
+docker-compose -f /home/config/docker/docker-compose/go/allora-worker-x-reputer/allora-node/docker-compose.yaml down
+
 _____________
 DELETE ALLORA
 docker-compose -f /home/config/docker/docker-compose/go/basic-coin-prediction-node/docker-compose.yml down -v
 docker-compose -f /home/config/docker/docker-compose/go/allora-huggingface-walkthrough/docker-compose.yaml down -v
 docker-compose -f /home/config/docker/docker-compose/go/allora-worker-x-reputer/allora-node/docker-compose.yaml down -v
+
 
 
 
