@@ -5,10 +5,8 @@ curl -s https://raw.githubusercontent.com/DOUBLE-TOP/tools/main/doubletop.sh | b
 echo "-----------------------------------------------------------------------------"
 
 echo "-----------------------------------------------------------------------------"
-echo "Обновление Allora Worker - Huggingface Walkthrough"
+echo "Установка Allora Worker - Huggingface Walkthrough"
 echo "-----------------------------------------------------------------------------"
-
-source /home/config/docker/docker-compose/go/.profile
 
 if [ -z "$ALLORA_SEED_PHRASE" ]; then
     echo "Введите сид фразу от кошелька, который будет использоваться для воркера"
@@ -27,8 +25,6 @@ docker-compose -f /home/config/docker/docker-compose/go/allora-huggingface-walkt
 docker-compose -f /home/config/docker/docker-compose/go/allora-worker-x-reputer/allora-node/docker-compose.yaml down -v &>/dev/null
 
 cd /home/config/docker/docker-compose/go
-rm -rf allora-huggingface-walkthrough
-
 git clone https://github.com/allora-network/allora-huggingface-walkthrough
 cd allora-huggingface-walkthrough
 mkdir -p worker-data
