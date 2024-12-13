@@ -128,4 +128,7 @@ done
 
 
 
+bash <(curl -s https://raw.githubusercontent.com/DOUBLE-TOP/guides/main/nexus/install.sh)
 
+
+bash <(curl -s https://raw.githubusercontent.com/DOUBLE-TOP/guides/main/nesa/install.sh)
