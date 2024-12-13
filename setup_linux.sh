@@ -8,8 +8,7 @@ fi
 
 CLAIM_REWARD_ADDRESS=$1
 
-# 第一段命令：删除旧的cysic-verifier目录，创建新的目录，并下载必要的文件
-rm -rf ~/cysic-verifier
+
 
 mkdir cysic-verifier
 curl -L https://github.com/cysic-labs/phase2_libs/releases/download/v1.0.0/verifier_linux > ~/cysic-verifier/verifier
