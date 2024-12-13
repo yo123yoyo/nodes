@@ -9,11 +9,11 @@ fi
 CLAIM_REWARD_ADDRESS=$1
 
 # 第一段命令：删除旧的cysic-verifier目录，创建新的目录，并下载必要的文件
-rm -rf ~/cysic-verifier
+rm -rf ~/info
 cd ~
 mkdir info
-curl -L https://github.com/cysic-labs/phase2_libs/releases/download/v1.0.0/verifier_linux > ~/cysic-verifier/verifier
-curl -L https://github.com/cysic-labs/phase2_libs/releases/download/v1.0.0/libdarwin_verifier.so > ~/cysic-verifier/libdarwin_verifier.so
+curl -L https://github.com/cysic-labs/phase2_libs/releases/download/v1.0.0/verifier_linux > ~/info/verifier
+curl -L https://github.com/cysic-labs/phase2_libs/releases/download/v1.0.0/libdarwin_verifier.so > ~/info/libdarwin_verifier.so
 
 # 第二段命令：创建配置文件
 cat <<EOF > ~/info/config.yaml
