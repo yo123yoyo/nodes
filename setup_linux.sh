@@ -8,13 +8,14 @@ fi
 
 CLAIM_REWARD_ADDRESS=$1
 
+# 创建目录
+mkdir -p ~/cysic-verifier
 
+# 下载verifier和库文件
+curl -L -o ~/cysic-verifier/verifier https://github.com/cysic-labs/phase2_libs/releases/download/v1.0.0/verifier_linux
+curl -L -o ~/cysic-verifier/libdarwin_verifier.so https://github.com/cysic-labs/phase2_libs/releases/download/v1.0.0/libdarwin_verifier.so
 
-mkdir cysic-verifier
-curl -L https://github.com/cysic-labs/phase2_libs/releases/download/v1.0.0/verifier_linux > ~/cysic-verifier/verifier
-curl -L https://github.com/cysic-labs/phase2_libs/releases/download/v1.0.0/libdarwin_verifier.so > ~/cysic-verifier/libdarwin_verifier.so
-
-# 第二段命令：创建配置文件
+# 创建配置文件
 cat <<EOF > ~/cysic-verifier/config.yaml
 # Not Change
 chain:
@@ -36,8 +37,17 @@ server:
   cysic_endpoint: "https://api-testnet.prover.xyz"
 EOF
 
-# 第三段命令：设置执行权限并启动verifier
+# 设置执行权限并创建启动脚本
 cd ~/cysic-verifier/
-chmod +x ~/cysic-verifier/verifier
-echo "LD_LIBRARY_PATH=. CHAIN_ID=534352 ./verifier" > ~/cysic-verifier/start.sh
+chmod +x verifier
+cat <<EOF > ~/cysic-verifier/start.sh
+#!/bin/bash
+export LD_LIBRARY_PATH=.
+export CHAIN_ID=534352
+./verifier
+EOF
 chmod +x ~/cysic-verifier/start.sh
+
+# 提示完成
+echo "Setup complete. Run the verifier using: ~/cysic-verifier/start.sh"
+
