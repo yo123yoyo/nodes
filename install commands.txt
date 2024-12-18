@@ -1,6 +1,6 @@
 ___________________________________ALLORA
 
-mkdir -p /home/config/docker/docker-compose/go && 
+mkdir -p /home/config/docker/docker-compose/go && cd /home/config/docker/docker-compose/go
 cd /home/config/docker/docker-compose/go
 
 
