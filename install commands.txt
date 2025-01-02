@@ -33,3 +33,7 @@ docker-compose -f /home/config/docker/docker-compose/go/allora-huggingface-walkt
 docker-compose -f /home/config/docker/docker-compose/go/allora-worker-x-reputer/allora-node/docker-compose.yaml down -v
 
 rm -rf allora-chain basic-coin-prediction-node allora-huggingface-walkthrough allora-worker-x-reputer .allorad .nexus
+
+
+
+bash <(curl -s https://raw.githubusercontent.com/DOUBLE-TOP/guides/main/nesa/install.sh)
