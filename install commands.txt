@@ -37,3 +37,13 @@ rm -rf allora-chain basic-coin-prediction-node allora-huggingface-walkthrough al
 
 
 bash <(curl -s https://raw.githubusercontent.com/DOUBLE-TOP/guides/main/nesa/install.sh)
+
+_____________________________________BEVM
+
+
+mkdir ./lnd && cd lnd && wget https://raw.githubusercontent.com/btclayer2/lnd-hub/refs/heads/main/lnd.conf.example
+cp ./lnd.conf.example ./lnd.conf
+nano ./lnd.conf 
+cd && docker run --name lnd --rm -d --network host -v ./lnd:/root/.lnd lightninglabs/lnd:v0.18.3-beta
+docker exec -it lnd lncli create
+
