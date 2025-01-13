@@ -47,3 +47,17 @@ nano ./lnd.conf
 cd && docker run --name lnd --rm -d --network host -v ./lnd:/root/.lnd lightninglabs/lnd:v0.18.3-beta
 docker exec -it lnd lncli create
 
+
+
+_____________________________________T3RN
+
+
+
+_____________________________________HYPERLANE
+
+sudo wget https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/hyperlane.sh && chmod +x hyperlane.sh && ./hyperlane.sh
+
+
+
+
+
