@@ -1,0 +1,15 @@
+sudo apt-get install -y squid apache2-utils
+
+sudo htpasswd -c /etc/squid/passwd username_here
+
+cd /etc/squid && rm squid.conf && cd
+
+sudo nano /etc/squid/squid.conf
+
+http_port 3128
+auth_param basic program /usr/lib/squid/basic_ncsa_auth /etc/squid/passwd
+auth_param basic realm Proxy Authentication Required
+acl authenticated proxy_auth REQUIRED
+http_access allow authenticated
+
+sudo systemctl restart squid
