@@ -51,11 +51,14 @@ docker exec -it lnd lncli create
 
 _____________________________________T3RN
 
-
+sudo wget https://raw.githubusercontent.com/londrwus/nodes/main/t3rn.sh && chmod +x t3rn.sh && ./t3rn.sh
 
 _____________________________________HYPERLANE
 
 sudo wget https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/hyperlane.sh && chmod +x hyperlane.sh && ./hyperlane.sh
+
+
+
 
 
 
