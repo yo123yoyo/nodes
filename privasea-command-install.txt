@@ -1,4 +1,4 @@
-cd /home/config/docker/docker-compose/go && ./hyperlane.sh
+cd /home/config/docker/docker-compose/go
 
 
 docker pull privasea/acceleration-node-beta:latest
