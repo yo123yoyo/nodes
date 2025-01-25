@@ -1,0 +1,16 @@
+cd /home/config/docker/docker-compose/go && ./hyperlane.sh
+
+
+docker pull privasea/acceleration-node-beta:latest
+
+mkdir -p  /privasea/config && cd  /privasea
+
+docker run -it -v "/privasea/config:/app/config"  \
+privasea/acceleration-node-beta:latest ./node-calc new_keystore
+
+cd config && ls
+
+mv ./ ./wallet_keystore
+ls
+
+cat wallet_keystore
