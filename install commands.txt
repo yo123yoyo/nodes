@@ -51,6 +51,7 @@ docker exec -it lnd lncli create
 
 _____________________________________T3RN
 
+rm -rf executor && cd /home/config/docker/docker-compose/go && rm -rf t3rn.sh &&  screen -S t3rnnode -X quit
 sudo wget https://raw.githubusercontent.com/londrwus/nodes/main/t3rn.sh && chmod +x t3rn.sh && ./t3rn.sh
 
 _____________________________________HYPERLANE
