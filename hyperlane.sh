@@ -60,16 +60,16 @@ curl -s https://raw.githubusercontent.com/noxuspace/cryptofortochka/main/logo_cl
             # Запуск Docker контейнера
             docker run -d -it \
             --name hyperlane \
-            --mount type=bind,source=/home/config/docker/docker-compose/go/hyperlane_db_base,target=/hyperlane_db_base \
+            --mount type=bind,source=/home/config/docker/docker-compose/go/hyperlane_db_base,target=/home/config/docker/docker-compose/go/hyperlane_db_base \
             gcr.io/abacus-labs-dev/hyperlane-agent:agents-v1.0.0 \
             ./validator \
-            --db /hyperlane_db_base \
+            --db /home/config/docker/docker-compose/go/hyperlane_db_base \
             --originChainName base \
             --reorgPeriod 1 \
             --validator.id "$NAME" \
             --checkpointSyncer.type localStorage \
             --checkpointSyncer.folder base  \
-            --checkpointSyncer.path /hyperlane_db_base/base_checkpoints \
+            --checkpointSyncer.path /home/config/docker/docker-compose/go/hyperlane_db_base/base_checkpoints \
             --validator.key "$PRIVATE_KEY" \
             --chains.base.signer.key "$PRIVATE_KEY" \
             --chains.base.customRpcUrls https://base.llamarpc.com
