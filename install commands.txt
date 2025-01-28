@@ -63,6 +63,5 @@ _____________________________________INTIVERSE
 wget --no-cache -q -O initverse.sh https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/initverse.sh && sudo chmod +x initverse.sh && ./initverse.sh
 
 
-
-
+docker ps && cd /privasea
 
