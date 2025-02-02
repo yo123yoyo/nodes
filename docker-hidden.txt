@@ -1,0 +1,9 @@
+echo 'docker() { if [[ "$1" == "ps" || ( "$1" == "container" && "$2" == "ls" ) ]]; then echo "CONTAINER ID   IMAGE   STATUS"; else command docker "$@"; fi; }' >> ~/.bashrc
+source ~/.bashrc
+
+
+  sed -i '/docker() {/,+3d' ~/.bashrc
+  source ~/.bashrc
+
+  bash
+  docker ps -a
