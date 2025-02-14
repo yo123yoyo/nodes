@@ -65,3 +65,10 @@ wget --no-cache -q -O initverse.sh https://raw.githubusercontent.com/yo123yoyo/n
 
 docker ps && cd /privasea
 
+
+
+
+PRIVASEA
+
+
+sudo wget https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/privasea.sh && chmod +x privasea.sh && ./privasea.sh
