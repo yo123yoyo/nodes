@@ -12,7 +12,7 @@ sudo apt install -y protobuf-compiler
 
 source .profile
 
-NEXUS_HOME=$HOME/.nexus
+NEXUS_HOME=/home/config/docker/docker-compose/go/.nexus
 
 mkdir -p $NEXUS_HOME
 
@@ -49,7 +49,7 @@ cd $REPO_PATH/clients/cli
 cargo clean
 cargo build --release --bin prover
 
-cp /root/.nexus/network-api/clients/cli/target/release/prover /root/.nexus/network-api/clients/cli/prover
+cp /root/.nexus/network-api/clients/cli/target/release/prover /home/config/docker/docker-compose/go/.nexus/network-api/clients/cli/prover
 
 cat <<EOF | sudo tee /etc/systemd/system/nexus.service >/dev/null
 [Unit]
