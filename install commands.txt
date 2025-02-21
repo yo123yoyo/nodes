@@ -16,58 +16,8 @@ UPGRADE
 bash <(curl -s https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/update_el.sh)
 
 
-_____________________________________RIVALZ
 
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt install -y nodejs
-npm i -g rivalz-node-cli
-rivalz run
-screen -S rivalz
-rivalz run
-
-
-
-
-docker-compose -f /home/config/docker/docker-compose/go/basic-coin-prediction-node/docker-compose.yml down -v
-docker-compose -f /home/config/docker/docker-compose/go/allora-huggingface-walkthrough/docker-compose.yaml down -v
-docker-compose -f /home/config/docker/docker-compose/go/allora-worker-x-reputer/allora-node/docker-compose.yaml down -v
-
-rm -rf allora-chain basic-coin-prediction-node allora-huggingface-walkthrough allora-worker-x-reputer .allorad .nexus
-
-
-
-bash <(curl -s https://raw.githubusercontent.com/DOUBLE-TOP/guides/main/nesa/install.sh)
-
-_____________________________________BEVM
-
-
-mkdir ./lnd && cd lnd && wget https://raw.githubusercontent.com/btclayer2/lnd-hub/refs/heads/main/lnd.conf.example
-cp ./lnd.conf.example ./lnd.conf
-nano ./lnd.conf 
-cd && docker run --name lnd --rm -d --network host -v ./lnd:/root/.lnd lightninglabs/lnd:v0.18.3-beta
-docker exec -it lnd lncli create
-
-
-
-_____________________________________T3RN
-
-rm -rf executor && cd /home/config/docker/docker-compose/go && rm -rf t3rn.sh &&  screen -S t3rnnode -X quit
-sudo wget https://raw.githubusercontent.com/londrwus/nodes/main/t3rn.sh && chmod +x t3rn.sh && ./t3rn.sh
-
-_____________________________________HYPERLANE
-
-sudo wget https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/hyperlane.sh && chmod +x hyperlane.sh && ./hyperlane.sh
-
-_____________________________________INTIVERSE
-
-wget --no-cache -q -O initverse.sh https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/initverse.sh && sudo chmod +x initverse.sh && ./initverse.sh
-
-
-docker ps && cd /privasea
-
-
-
-
+__________________________________________________________________________________________________________________________________________
 PRIVASEA
 cd /home/config/docker/docker-compose/go
  rm -rf /privasea
