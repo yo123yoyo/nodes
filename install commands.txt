@@ -27,6 +27,3 @@ cd privasea/config && nano wallet_keystore
 
 cd /home/config/docker/docker-compose/go && ./privasea.sh
 
-NEXUS2_________
-
-sudo bash <(curl -s https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/nexus2.sh)
