@@ -19,8 +19,7 @@ bash <(curl -s https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main
 
 __________________________________________________________________________________________________________________________________________
 PRIVASEA
-cd /home/config/docker/docker-compose/go
- rm -rf /privasea
+cd /home/config/docker/docker-compose/go && rm -rf privasea && ./privasea.sh
 
 sudo wget https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/privasea.sh && chmod +x privasea.sh && ./privasea.sh
 cd privasea/config && nano wallet_keystore
