@@ -24,5 +24,7 @@ cd /home/config/docker/docker-compose/go && rm -rf privasea && ./privasea.sh
 sudo wget https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/privasea.sh && chmod +x privasea.sh && ./privasea.sh
 cd privasea/config && nano wallet_keystore
 
-cd /home/config/docker/docker-compose/go && ./privasea.sh
 
+
+
+sudo wget https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/gensyn.sh && chmod +x gensyn.sh && ./gensyn.sh
