@@ -28,3 +28,7 @@ cd privasea/config && nano wallet_keystore
 
 
 sudo wget https://raw.githubusercontent.com/yo123yoyo/nodes/refs/heads/main/gensyn.sh && chmod +x gensyn.sh && ./gensyn.sh
+
+https://raw.githubusercontent.com/DOUBLE-TOP/guides/refs/heads/main/drosera/install.sh
+
+bash <(curl -s https://raw.githubusercontent.com/DOUBLE-TOP/guides/refs/heads/main/drosera/install.sh)
